@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-labelledby="title desc">
+  <title id="title">Anderstone Partners Logo</title>
+  <desc id="desc">Deep blue AP monogram and wordmark</desc>
+  <!-- Monogram -->
+  <defs>
+    <style>
+      .blue{fill:#0b3a6f}
+    </style>
+  </defs>
+  <rect class="blue" x="8" y="20" rx="12" width="80" height="80"/>
+  <!-- AP letters -->
+  <path fill="#ffffff" d="M36 82l9-26h10l9 26h-8l-2-6h-8l-2 6h-8zm14-12h5l-2.5-8-2.5 8zM77 56h8c6 0 10 4 10 10s-4 10-10 10h-8V56zm8 16c3 0 5-2 5-6s-2-6-5-6h-3v12h3z"/>
+  <!-- Wordmark -->
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+    <text x="110" y="78" font-size="34" font-weight="700" fill="#1f2937">Anderstone</text>
+    <text x="370" y="78" font-size="22" font-weight="600" fill="#334155">Partners</text>
+  </g>
+</svg>
