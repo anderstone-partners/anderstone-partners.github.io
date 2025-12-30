@@ -84,13 +84,21 @@
       return ok;
     }
 
+    // If the page was redirected back with ?success=1 show the success message
+    try {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('success') === '1' && success) {
+        success.hidden = false;
+      }
+    } catch (e) {}
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const ok = validate();
-      if (ok && success) {
-        success.hidden = false;
-        // Do not transmit data; static prototype only
-        form.reset();
+      if (ok) {
+        // Submit the form to the configured action (formsubmit.co).
+        // Using form.submit() bypasses this submit handler and performs a full POST.
+        form.submit();
       } else if (success) {
         success.hidden = true;
       }

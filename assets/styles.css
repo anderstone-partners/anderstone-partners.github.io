@@ -25,7 +25,8 @@ html, body { height: 100%; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* Body paragraphs: prefer Neue Haas Grotesk Text (local or via webfont); fallbacks provided */
+  font-family: 'Neue Haas Grotesk Text', 'Neue Haas Grotesk Text Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
@@ -104,7 +105,21 @@ a:hover { text-decoration: underline; }
 
 /* Page hero minimal */
 .page-hero.minimal { padding: var(--space-7) 0 var(--space-5); background: linear-gradient(180deg, #f9fbff, #fff); border-bottom: 1px solid var(--border); }
-.page-hero.minimal h1 { margin: 0 0 var(--space-2) 0; }
+.page-hero.minimal h1 { margin: 0 0 var(--space-2) 0; /* Services hero headers: prefer Graphik */
+  font-family: "Graphik", Helvetica, sans-serif, "Lucida Sans Unicode";
+}
+
+/* Logo/brand image sizing */
+.brand img, .brand-img { display: block; height: 56px; width: auto; background: transparent; }
+
+/* Larger logo used in hero section */
+.logo-hero { height: 140px; width: auto; display: block; background: transparent; }
+
+/* Footer logo size (bigger than the tiny default) */
+.footer-logo { height: 56px; width: auto; display: block; background: transparent; }
+
+/* CTA subcopy under buttons */
+.cta-subcopy { margin-top: 0.4rem; color: var(--muted); font-size: 0.95rem; }
 
 /* Services */
 .service-block { background: var(--surface); border: 1px solid var(--border); padding: var(--space-5); border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: var(--space-5); }

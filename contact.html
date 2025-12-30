@@ -6,7 +6,8 @@
     <title>Contact — Anderstone Partners</title>
     <meta name="description" content="Let’s talk. We typically respond within two business days." />
     <link rel="canonical" href="https://anderstonepartners.com/contact.html" />
-    <link rel="icon" href="assets/img/anderstone_logo_aligned.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
     <link rel="stylesheet" href="assets/styles.css" />
     <script defer src="assets/script.js"></script>
   </head>
@@ -14,7 +15,9 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header" role="banner">
       <div class="container header-inner" style="display: flex; align-items: center; justify-content: space-between; min-height: 64px;">
-        <a href="index.html" class="brand" aria-label="Anderstone Partners Home" style="font-family: 'Arial', sans-serif; font-size: 1.5rem; color: #6B859C; font-weight: 700; letter-spacing: 0.01em; text-decoration: none;">Anderstone Partners</a>
+        <a href="index.html" class="brand" aria-label="Anderstone Partners Home">
+          <img src="assets/img/anderstone_logo_aligned.png" alt="Anderstone Partners logo" class="brand-img">
+        </a>
         <nav id="site-nav" class="site-nav" aria-label="Main" style="margin-left: auto;">
           <ul style="display: flex; align-items: center; gap: 1.5rem; margin: 0; padding: 0; list-style: none;">
             <li><a href="index.html">Home</a></li>
@@ -41,7 +44,7 @@
       <section class="section" aria-labelledby="contact-form-title">
         <div class="container">
           <h2 id="contact-form-title" class="sr-only">Contact form</h2>
-          <form id="contact-form" novalidate aria-describedby="confidentiality-note">
+          <form id="contact-form" novalidate aria-describedby="confidentiality-note" action="https://formsubmit.co/contact@anderstonepartners.com" method="POST">
             <div class="form-row">
               <label for="name">Name</label>
               <input id="name" name="name" type="text" required aria-describedby="name-error" />
@@ -66,6 +69,10 @@
               <button type="submit" class="btn primary">Send Message</button>
               <a class="btn secondary" href="mailto:contact@anderstonepartners.com">Email Instead</a>
             </div>
+            <!-- Hidden inputs used by formsubmit.co -->
+            <input type="hidden" name="_subject" value="New contact form submission from Anderstone Partners website">
+            <input type="hidden" name="_next" value="https://anderstonepartners.com/contact.html?success=1">
+            <input type="hidden" name="_captcha" value="false">
             <p id="confidentiality-note" class="muted small">
               Confidentiality note: This is a static prototype—data is not transmitted. Feel free to share context at a high level; sensitive details can wait until an NDA is in place.
             </p>
@@ -80,7 +87,6 @@
     <footer class="site-footer" role="contentinfo">
       <div class="container footer-inner">
         <div class="footer-brand">
-          <img src="assets/img/anderstone_logo_aligned.svg" alt="Anderstone Partners logo" height="28" />
           <p>© <span id="year"></span> Anderstone Partners LLC</p>
         </div>
         <nav aria-label="Footer">
